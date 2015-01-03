@@ -1,0 +1,1 @@
+sp_RENAME 'auditnotes.OrderStatusID' , 'StatusCode', 'COLUMN'

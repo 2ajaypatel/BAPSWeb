@@ -1,0 +1,77 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+   
+    <!-- Begin Wrapper -->
+   <div id="wrapper">
+         <!-- Begin Header -->
+         <div id="headerNav">
+		 
+		       This is the Header Navigation
+               <table align="right" width="30%">
+                <tr>
+                    <td  align="right">
+                        <asp:HyperLink ID="HyperLink1" runat="server">HyperLink</asp:HyperLink>
+                        &nbsp;&nbsp;
+                        <asp:HyperLink ID="HyperLink2" runat="server">HyperLink</asp:HyperLink>
+                    </td>
+                </tr>
+               </table>		 
+			   
+		 </div>
+         <!-- Begin Header -->
+         <div id="header">
+		 
+		       This is the Header		 
+			   
+		 </div>
+		 <!-- End Header -->
+		 
+		 <!-- Begin Navigation -->
+         <div id="navigation">
+		 
+		       This is the Navigation		 
+			   
+		 </div>
+		 <!-- End Navigation -->
+		 
+         <!-- Begin Faux Columns -->
+		 <div id="faux">
+		 
+		       <!-- Begin Left Column -->
+		       <div id="content">
+		        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+		         </div>	 
+			  
+			   
+	      
+			  
+			   
+         </div>	   
+         <!-- End Faux Columns --> 
+
+         <!-- Begin Footer -->
+         <div id="footer">
+            <%-- <img src="Images/ssl_icon.jpg" height="30" width="30" alt="SSL"/>--%>
+               This is the Footer		
+
+         </div>
+		 <!-- End Footer -->
+		 
+   </div>
+   <!-- End Wrapper -->
+   </form>
+</body>
+</html>

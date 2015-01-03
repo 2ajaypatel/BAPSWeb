@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+
+<siteMapNode  title="Home"  description="Home" url="~/Designer/dsp_ViewOrders.aspx">
+
+    <siteMapNode  title="Designer"  description="Design Studio">
+      <!--<siteMapNode url="~/Designer/rpt_SearchOrderByCenter.aspx" title="View Orders"  description="View orders by Center" />-->
+      
+    </siteMapNode>
+
+    <siteMapNode url="" title="Reporting"  description="Calendar Project Report">
+      <!--<siteMapNode url="~/Design/rpt_SearchOrderByCenter.aspx" title="Search Order By Center"  description="Search orders." />-->
+      
+
+    </siteMapNode>
+
+    <siteMapNode url="~/Designer/dsp_About.aspx" title="About"  description="About" />
+
+  </siteMapNode>
+
+</siteMap>

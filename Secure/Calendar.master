@@ -1,0 +1,109 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Calendar.master.cs" Inherits="Calendar_Calendar" %>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Welcome to the BAPS Shree Swaminarayan Sanstha - CALENDAR SPONSERSHIP</title>
+    <script language="javascript" src="../App_Common/functions.js" type="text/javascript" ></script>
+    <link rel="shortcut icon" type="image/ico" href="../Images/favicon.ico">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server" >
+
+     <!-- Begin Wrapper -->
+   <div id="wrapper">
+
+         <!-- Begin Header -->
+         <div id="headerNav">
+		     
+               <table align="right" width="40%">
+                <tr>
+                     <td align="right">  
+                              
+                             <% if(Session != null && Session["firstname"] != null) 
+                                {
+                                    Response.Write("You're logged in as: "); 
+                                    Response.Write(Session["firstname"] + " "); 
+                                    Response.Write(Session["lastname"]);
+                                    Response.Write("&nbsp;&nbsp;<b>Center:</b>  " + Session["centerName"] + "&nbsp;&nbsp;&nbsp;&nbsp;");
+                                }
+                              %>
+                              <asp:HyperLink runat="server" 
+                                 NavigateUrl="~/dsp_SignOut.aspx" Font-Bold="True" ForeColor="White">Logout</asp:HyperLink>
+                        </td>
+                </tr>
+               </table>		 
+			   
+		 </div>
+
+         <!-- Begin Header - Header Banner -->
+         <div id="header">
+		 
+		        <asp:Image ID="Image2" runat="server" ImageUrl="~/Images/Header.jpg" width="922px" Height="100%"/> 
+			   
+		 </div>
+		 <!-- End Header -->
+		 
+		 <!-- Begin Navigation - Main Menu -->
+         <div id="navigation">
+		    <asp:Menu ID="CalendarMenu" 
+                runat="server" 
+                DataSourceID="smdsCalendar" 
+                DynamicHorizontalOffset="0" 
+                Font-Names="Trebuchet MS" 
+                Font-Size="1.0em" 
+                ForeColor="White" 
+                StaticSubMenuIndent="1px" 
+                Orientation="Horizontal" 
+                StaticDisplayLevels="2">
+
+                <DynamicHoverStyle ForeColor="White" Font-Bold="True" />
+                <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="1px" 
+                    Font-Bold="True" />
+                <DynamicMenuStyle BackColor="#2E2842"  Font-Bold="True"  />
+                <DynamicSelectedStyle  Font-Bold="True" />
+                <StaticHoverStyle  ForeColor="White" Font-Bold="True"  />
+                <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="1px" />
+                <StaticSelectedStyle  Font-Bold="True"  />
+            </asp:Menu>
+
+            <asp:SiteMapDataSource ID="smdsCalendar" runat="server" 
+                SiteMapProvider="CalendarSite" />
+        </div>
+		 <!-- End Navigation -->
+		 
+         <!-- Begin Faux Columns -->
+		 <div id="faux">
+		 
+		       <!-- Begin Left Column -->
+		       <div id="content">
+		           <asp:ContentPlaceHolder ID="cphContent" runat="server"> </asp:ContentPlaceHolder>
+		         </div>	 
+        	   
+         </div>	   
+         <!-- End Faux Columns --> 
+
+         <!-- Begin Footer -  copy right , term and condition -->
+         <div id="footer" >
+		       
+               <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/dsp_Login.aspx" Font-Bold="True" ForeColor="White">Home</asp:HyperLink>
+                            &nbsp&nbsp&nbsp |
+                            <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/dsp_ContactUs.aspx" Font-Bold="True" ForeColor="White">Contact Us</asp:HyperLink>
+                            &nbsp&nbsp&nbsp |
+                            <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/dsp_PrivacyPolicy.aspx" Font-Bold="True" ForeColor="White">Privacy Policy</asp:HyperLink>
+                            &nbsp&nbsp&nbsp |
+                            <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/dsp_Terms.aspx" Font-Bold="True" ForeColor="White">Terms & Conditions</asp:HyperLink>
+
+         </div>
+		 <!-- End Footer -->
+		 
+   </div>
+   <!-- End Wrapper -->
+   
+    </form>
+</body>
+</html>

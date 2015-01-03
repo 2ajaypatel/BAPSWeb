@@ -1,0 +1,95 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Main.master.cs" Inherits="Master_Main" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Welcome to the BAPS Shree Swaminarayan Sanstha - CALENDAR SPONSERSHIP</title>
+    <link rel="shortcut icon" type="image/ico" href="../Images/favicon.ico" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+    <form id="form1" runat="server" >
+
+     <!-- Begin Wrapper -->
+   <div id="wrapper">
+
+         <!-- Begin Header -->
+         <div id="headerNav">
+		     
+               <table align="right" width="50%">
+                <tr>
+                     <td align="right">  
+                              
+                            <% if (Session != null && Session["firstname"] != null && Session["firstname"] != "")
+                               {
+                                   Response.Write("You're logged in as: ");
+                                   Response.Write(Session["firstname"] + " ");
+                                   Response.Write(Session["lastname"]);
+                                   Response.Write("&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;<b>Center:</b> " + Session["centerName"] + "&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;");
+                               }
+                            %>
+                            <%  if (Session != null && Session["firstname"] != null && Session["firstname"] != "")
+                                {
+                                    //Response.Write("<a href='~/Secure/OrderView.aspx" + " '>Home</a>");
+
+                                    Response.Write("<a href='~/Secure/OrderView.aspx" + " '>Home</a>");
+                                    Response.Write("&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;");
+                                }
+                            %>
+                              <asp:HyperLink ID="HyperLink1" runat="server" 
+                                 NavigateUrl="~/dsp_SignOut.aspx" Font-Bold="True" ForeColor="White">Logout</asp:HyperLink>
+                        </td>
+                </tr>
+               </table>		 
+			   
+		 </div>
+
+         <!-- Begin Header - Header Banner -->
+         <div id="header">
+		 
+		        <asp:Image ID="Image2" runat="server" ImageUrl="~/Images/Header.jpg" width="922px" Height="100%"/> 
+			   
+		 </div>
+		 <!-- End Header -->
+		 
+		 <!-- Begin Navigation - Main Menu -->
+         <div id="navigation">
+		    
+        </div>
+		 <!-- End Navigation -->
+		 
+         <!-- Begin Faux Columns -->
+		 <div id="faux">
+		 
+		       <!-- Begin Left Column -->
+		       <div id="content">
+		           <asp:ContentPlaceHolder ID="cphContent" runat="server"> </asp:ContentPlaceHolder>
+		         </div>	 
+        	   
+         </div>	   
+         <!-- End Faux Columns --> 
+
+         <!-- Begin Footer -  copy right , term and condition -->
+         <div id="footer" >
+		       
+               <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/dsp_Login.aspx" Font-Bold="True" ForeColor="White">Home</asp:HyperLink>
+                            &nbsp&nbsp&nbsp |
+                            <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/dsp_ContactUs.aspx" Font-Bold="True" ForeColor="White">Contact Us</asp:HyperLink>
+                            &nbsp&nbsp&nbsp |
+                            <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/dsp_PrivacyPolicy.aspx" Font-Bold="True" ForeColor="White">Privacy Policy</asp:HyperLink>
+                            &nbsp&nbsp&nbsp |
+                            <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/dsp_Terms.aspx" Font-Bold="True" ForeColor="White">Terms & Conditions</asp:HyperLink>
+
+         </div>
+		 <!-- End Footer -->
+		 
+   </div>
+   <!-- End Wrapper -->
+   
+    </form>
+</body>
+</html>

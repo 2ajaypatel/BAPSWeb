@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap>
+  <siteMapNode>
+
+    <siteMapNode title="Home" description="Order View" url="~/Secure/OrderView.aspx" >
+        <!--<siteMapNode title="New Order" description="Order View" url="~/Secure/OrderView.aspx" /> 
+      <siteMapNode title="New Order" description="Add new order" url="~/Secure/OrderForm.aspx" /> 
+	  -->
+	 
+    </siteMapNode>   
+    
+    <siteMapNode title="Reporting" description="Calendar Coordinator Reports" >
+      <siteMapNode title="Order Summary" description="Order summary report" url="~/Secure/rpt_OrderSummary.aspx" />
+    </siteMapNode>
+    
+  </siteMapNode>
+</siteMap>

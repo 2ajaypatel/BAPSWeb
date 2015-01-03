@@ -1,0 +1,6 @@
+USE BAPS_CALENDAR
+GO
+
+ALTER TABLE [dbo].[OrderMaster]
+ADD ProjectYear INT NULL
+GO

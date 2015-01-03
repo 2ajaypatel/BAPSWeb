@@ -1,0 +1,11 @@
+USE BAPS_CALENDAR
+GO
+
+ALTER TABLE [dbo].[UserMaster]
+ADD RoleCode INT CONSTRAINT def_RoleCode DEFAULT 20 NOT NULL
+GO
+
+ALTER TABLE UserMaster
+ADD CONSTRAINT fk_UserMasterRoleCode_UserRolesRoleCode FOREIGN KEY(RoleCode)REFERENCES UserRoles(RoleCode)
+GO
+

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+
+  <siteMapNode  title="Home"  description="Home" url="~/Admin/dsp_ViewOrders.aspx">
+
+    <siteMapNode  title="Administrator"  description="Calendar Project Admin">
+      <siteMapNode url="~/Admin/dsp_ProjectYears.aspx" title="Project Year"  description="Project Year Management" />
+      <siteMapNode url="~/Admin/dsp_Regions.aspx" title="Regions"  description="Region Management" />
+      <siteMapNode url="~/Admin/dsp_Centers.aspx" title="Center Management"  description="Center Management" />
+      <siteMapNode url="~/Admin/dsp_UserMaster.aspx" title="User Management"  description="User Management" />
+      <siteMapNode url="~/Admin/dsp_Roles.aspx" title="User Roles"  description="User Role Management" />
+        <siteMapNode url="~/Admin/dsp_StateMaster.aspx" title="States"  description="State Management" />
+    </siteMapNode>
+
+    <siteMapNode url="" title="Report"  description="Calendar Project Report">
+      <siteMapNode url="~/Admin/rpt_SearchOrderByCenter.aspx" title="Search Order By Center"  description="Search orders." />
+      <siteMapNode url="~/Admin/rpt_OrderSummaryByCenter.aspx" title="Order Summary By Center"  description="Order Summary Report By Center." />
+      
+      <siteMapNode url="~/Admin/rpt_OrderSummaryByRegion.aspx" title="Customer Order Count By Region" />
+      <siteMapNode url="~/Admin/rpt_OrderQuantityCountByRegion.aspx" title="Order Quantity Count By Region" />
+      <siteMapNode url="~/Admin/rpt_GrossOrderSaleByRegionCenter.aspx" title="Gross Order Sale By Region and Center" />
+      <siteMapNode url="~/Admin/rpt_OrderAdvanceSummary.aspx" title="Order And Advance Summary By Center" />
+      <siteMapNode url="" title="Follow Up" >
+        <siteMapNode url="~/Admin/rpt_MissingOrdersByCenter.aspx" title="Missing Orders By Center"  description="List of centers missing order." />
+          <siteMapNode url="~/Admin/rpt_MissingOrdersADPaymentByCenter.aspx" title="Missing AD And Payment By Center"  description="List of centers missing order AD and payment." />
+        <siteMapNode url="~/Admin/rpt_unpaidOrders.aspx" title="Unpaid Order Summary By Center"  description="Unpaid Order Summary Report By Center." />
+      </siteMapNode>
+    </siteMapNode>
+
+    <siteMapNode url="~/Admin/dsp_About.aspx" title="About"  description="About" />
+
+  </siteMapNode>
+
+</siteMap>
